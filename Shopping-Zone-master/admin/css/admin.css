@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Edit Scroll Bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(199, 161, 235);
+}
+
+main::-webkit-scrollbar {
+  width: 0;
+}
+
+section main .products::-webkit-scrollbar {
+    width: 0;
+}
+
+/* --- Navbar Starts here --- */
+.upper-layer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 4;
+}
+
+nav {
+    background-color: rgb(152, 23, 217);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7.98%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-left .logo{
+    margin-right: 4rem;
+    padding: 0.6rem 0;
+    color: white;
+}
+
+form {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+}
+
+.nav-left #searchInput {
+    width: 30vw;
+    height: 2.5rem;
+    padding: 0 1rem;
+    border: none;
+    outline: none;
+}
+
+.nav-left form i {
+    font-size: 1.5rem;
+    padding: 0 .5rem;
+    color: rgb(169, 44, 232);
+}
+
+.nav-left form i:hover {
+    color: rgb(147, 19, 210);
+    transition: color 0.1s ease;
+}
+
+.nav-right {
+    padding: 0.5rem 0;
+}
+
+.nav-right span {
+    margin-left: 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    padding: 0.95rem 0;
+    cursor: pointer
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-right .fa-bars {
+    display: none;
+}
+
+.nav-menu {
+    position: fixed;
+    right: 4.5%;
+    background-color: white;
+    width: max-content;
+    box-shadow: 0px 1px 20px 1px rgba(152, 152, 152, 0.748);
+    z-index: -5;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-menu #tooltip {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -0.4rem;
+    left: 7rem;
+    transform: rotate(180deg);
+}
+
+.nav-menu #tooltip i {
+    color: white;
+    font-size: 1.7rem;
+}
+
+.nav-menu .menu {
+    padding: 0.5rem 0 0.8rem 2rem;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.nav-menu .menu a {
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem 5rem 0.5rem 0;
+}
+
+.nav-menu .menu:hover {
+    background-color: rgb(242, 242, 242);
+    transition: background-color 0.1s ease;
+}
+
+.nav-menu i {
+    margin-right: 2rem;
+    color: rgb(169, 44, 232);
+}
+
+/* --- Navbar Ends Here --- */
+
+
+/* --- Hero Section Starts Here --- */
+section{
+  background-color: rgb(241, 241, 241);
+  min-height: 90vh;
+  padding: 1rem 0;
+}
+section .my-container{
+  display: flex;
+  justify-content: space-between;
+}
+.my-container aside{
+  width: 23%;
+  height: fit-content;
+  background-color: white;
+  box-shadow: 1px 2px 7px 1px rgba(175, 175, 175, 0.748);
+}
+.my-container aside h5{
+  font-size: 1.4rem;
+  padding: 0.7rem 1rem;
+}
+.my-container aside .controls ul li{
+  list-style-type: none;
+  margin: 0.2rem 0;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.my-container aside .controls ul li.active{
+  color: rgb(123, 26, 213);
+}
+
+
+
+.my-container main{
+  width: 76%;
+  height: 90vh;
+  background-color: white;
+  overflow-y: scroll;
+  box-shadow: 1px 2px 7px 1px rgba(175, 175, 175, 0.748);
+}
+
+main .my-content-box{
+  min-height: 100%;
+  padding: 1rem 2rem;
+}
+
+main .my-content-box h2{
+  text-align: center;
+}
+
+main .my-content-box form{
+  display: flex;
+  flex-direction: column;
+}
+
+.add-products-content form label{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.add-products-content form input{
+  width: 50vw;
+  border: 1px solid blueviolet;
+}
+
+.add-products-content form #my-div{
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-products-content form #product_qua{
+  width: 24vw;
+}
+
+.add-products-content form select{
+  width: 25vw;
+  border: 1px solid blueviolet;
+}
+
+.add-products-content form button{
+  border: none;
+  outline: none;
+  background-color: blueviolet;
+  color: white;
+  padding: 0.7rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 30px;
+  margin-top: 2rem;
+}
+.add-products-content form button:hover{
+  background-color: rgb(110, 18, 196);
+}
+
+.my-content-box .product-row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.3rem;
+  margin-top: 1.5rem;
+}
+
+.my-content-box .product-row .product{
+  background-color: rgba(242, 242, 242, 0.523);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 2px 7px 1px rgba(175, 175, 175, 0.748);
+}
+.my-content-box .product-row .product:hover{
+  background-color: white;
+}
+
+.my-content-box .product-row .product img{
+  width: 210px;
+  height: 150px;
+  object-fit: contain;
+  padding: 1rem;
+}
+.my-content-box .product-row .product h5{
+  font-size: 1rem;
+  padding: 0 1rem;
+  max-width: 210px;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+.my-content-box .product-row .product h6{
+  font-size: 0.9rem;
+  padding: 0 1rem;
+}
+.my-content-box .product-row .product button{
+  border: none;
+  outline: none;
+  background-color: blueviolet;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  border-radius: 20px;
+  align-self: center;
+  margin: 1rem 0 0.7rem 0;
+}
+.my-content-box .product-row .product button:hover{
+  background-color: rgb(110, 18, 196);
+}
+.my-content-box .product-row .product #delete-btn{
+  background-color: rgb(225, 24, 24);
+}
+.my-content-box .product-row .product #delete-btn:hover{
+  background-color: rgb(254, 0, 0)
+}
+
+.all-orders-content h2{
+  margin-bottom: 1.7rem;
+}
+.my-content-box .order-row{
+  background-color: rgba(241, 241, 241, 0.567);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 1px 2px 7px 1px rgba(175, 175, 175, 0.748);
+}
+.my-content-box .order-row:hover{
+  box-shadow: 1px 2px 7px 1px rgba(149, 149, 149, 0.956);
+}
+.my-content-box .order-row img{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-right: 2rem;
+}
+.my-content-box .order-row .left{
+ display: flex;
+ max-width: 75%;
+}
+.my-content-box .order-row .left h4{
+ margin-bottom: 1rem;
+}
+
+/* --- Hero Section Ends Here --- */
+
+/* --- Modal Section Starts Here --- */
+.update-modal{
+  display: flex;
+  align-items: center;
+  background-color: rgb(129, 127, 130);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: -10;
+  opacity: -1;
+  transition: opacity 0.2s ease-in-out;
+}
+.update-modal .modal-container{
+  background-color: white;
+  min-height: 90vh;
+  padding: 1rem 5rem;
+  border-radius: 10px;
+}
+
+.update-modal .modal-container label{
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.update-modal .modal-container i{
+  color: red;
+  font-size: 2rem;
+  position: absolute;
+  top: 7.5%;
+  right: 8.5%;
+  cursor: pointer;
+}
+.update-modal .modal-container #my-div-2{
+  display: flex;
+  justify-content: space-between;
+}
+.update-modal .modal-container #my-div-2 #product_qua{
+  width: 34vw;
+}
+.update-modal .modal-container #my-div-2 #product_category{
+  width: 39vw;
+}
+
+#modal-update-btn {
+  border: none;
+  outline: none;
+  background-color: blueviolet;
+  color: white;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  margin-top: 2rem;
+}
+#modal-update-btn:hover {
+  background-color: rgb(112, 17, 200);
+}
+/* --- Modal Section Ends Here --- */
+
+
+
+
+
+
+
+
+/* --- Media Queries --- */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    /* --- Media For Navbar --- */
+    nav {
+      padding: 0 3%;
+    }
+  
+    .nav-left .logo {
+      margin-right: 1rem;
+      font-size: 1.4rem;
+    }
+  
+    .nav-left #searchInput {
+      width: 34vw;
+      padding: 0 0.5rem;
+    }
+  
+    .nav-left form i {
+      font-size: 1.4rem;
+      padding: 0 0.5rem 0 0;
+    }
+  
+    .nav-right span {
+      margin-left: 1.5rem;
+      font-size: 1.1rem;
+    }
+  
+    .nav-menu {
+      right: 3%;
+    }
+
+    .nav-menu #tooltip {
+      left: 10.5rem;
+    }
+  
+  }
+  
+  /* ---------------------------------------------- */
+  
+  @media screen and (min-width: 576px) and (max-width: 768px) {
+    /* --- Media For Navbar --- */
+    nav {
+      padding: 0 3%;
+    }
+  
+    .nav-left .logo {
+      margin-right: 1.2rem;
+      font-size: 1.4rem;
+    }
+  
+    .nav-left .logo span {
+      display: none;
+    }
+  
+    .nav-left #searchInput {
+      width: 42vw;
+      padding: 0 0.5rem;
+    }
+  
+    .nav-left form i {
+      font-size: 1.3rem;
+      padding: 0 0.7rem 0 0;
+    }
+  
+    .nav-right span {
+      margin-left: 1.2rem;
+      font-size: 1.1rem;
+    }
+  
+    .nav-menu {
+      right: 3.6%;
+    }
+
+    .nav-menu #tooltip {
+      left: 10.7rem;
+    }
+  
+  }
+  
+  /* ---------------------------------------------- */
+  
+  @media screen and (max-width: 576px) {
+    /* --- Media For Navbar --- */
+    nav {
+      padding: 0 3.7%;
+    }
+  
+    nav .nav-right span {
+      display: none;
+    }
+  
+    .nav-left .logo {
+      margin-right: 1rem;
+      font-size: 1.3rem;
+    }
+  
+    .nav-left .logo span {
+      display: none;
+    }
+  
+    .nav-left #searchInput {
+      width: 55vw;
+      padding: 0 0.5rem;
+    }
+  
+    .nav-left form i {
+      font-size: 1.2rem;
+      padding: 0 0.7rem 0 0;
+    }
+  
+    .nav-right .fa-bars {
+      display: block;
+      color: white;
+      font-size: 1.4rem;
+    }
+  
+    .nav-menu {
+      right: 2%;
+    }
+  
+    .nav-menu #tooltip {
+      position: absolute;
+      left: 12.2rem;
+    }
+  
+  }
